@@ -16,7 +16,7 @@
 
 
 @{
-    
+
     WebImage photo = null;
     var newFileName = "";
     var imagePath = "";
@@ -33,7 +33,7 @@
 
             photo.Save(imagePath);
         }
-    } 
+    }
 }
 
 
@@ -41,7 +41,7 @@
 {
     <div class="result">
 
-        <img src="@Url.Content(@imagePath)" alt="Sample Image" height="79" />
+        <img src="@Url.Content(@imagePath)" alt="HW3IMG" height="80" />
 
     </div>}
 
@@ -64,3 +64,10 @@
     </button>
 
 }
+
+
+<script>
+ $(document).ready(function ($) {
+ $(".gallery a").fancybox();
+ });
+</script>

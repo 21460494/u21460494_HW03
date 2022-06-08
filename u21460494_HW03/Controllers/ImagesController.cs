@@ -15,7 +15,7 @@ namespace u21460494_HW03.Controllers
         {
             //Fetch all files in the Folder (Directory).
 
-            string[] filePaths = Directory.GetFiles(Server.MapPath("~/Media/Images/"));
+            string[] filePaths = Directory.GetFiles(Server.MapPath("~/Media/Images"));
 
             //Copy File names to Model collection.
             //The return below returns to the list here.
@@ -35,7 +35,7 @@ namespace u21460494_HW03.Controllers
         {
             //Build the File Path.
 
-            string path = Server.MapPath("~/Media/Images/") + fileName;
+            string path = Server.MapPath("~/Media/Images") + fileName;
 
             //Read the File data into Byte Array.
             //Use a byte array becasue of octet-stream.
@@ -56,7 +56,7 @@ namespace u21460494_HW03.Controllers
             //Delete requires reading the files and then the allocation of a file path.
             //The file is then deleted based on the identified file path.
 
-            string path = Server.MapPath("~/Media/Images/") + fileName;
+            string path = Server.MapPath("~/Media/Images") + fileName;
             byte[] bytes = System.IO.File.ReadAllBytes(path);
 
             System.IO.File.Delete(path);

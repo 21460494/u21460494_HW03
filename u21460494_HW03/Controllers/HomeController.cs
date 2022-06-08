@@ -20,10 +20,10 @@ namespace u21460494_HW03.Controllers
 
         //Single File Upload
         [HttpPost]
-        public ActionResult Index(HttpPostedFileBase files, FormCollection frm)
+        public ActionResult Index(HttpPostedFileBase files, FormCollection rad)
         {
             //to get radio button data
-            string radioSelector = frm["Radio"].ToString();
+            string radioSelector = rad["Radio"].ToString();
 
             //used to check it was working
             //ViewBag.Message = ratioSelector;
