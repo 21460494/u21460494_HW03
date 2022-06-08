@@ -133,7 +133,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\A8A0750-1-750x500.jpg" />
+    <Content Include="504ab0d4c1248cb1ede908e7d35e1ba3.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -211,6 +211,7 @@
     <Content Include="Views\Videos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Media\Documents\" />
     <Folder Include="Media\Images\" />
     <Folder Include="Media\Videos\" />

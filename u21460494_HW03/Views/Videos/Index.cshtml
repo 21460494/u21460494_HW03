@@ -13,35 +13,36 @@
     </p>
 </div>
 
+<div class="p-3 mb-2 bg-light text-dark">
+    <div class="row">
 
-<div class="row">
+        @foreach (FileModel file in Model)
+        {
 
-    @foreach (FileModel file in Model)
-    {
+            <div class="gallery">
+                <div class="col-md-3">
+                    <a href="~/Media/Videos/@file.FileName"><video src="~/Media/Videos/@file.FileName" type="video/mp4" alt="HW3VID" width="320" height="240" /></a>
+                </div>
 
-        <div class="gallery">
-            <div class="col-md-3">
-              <a href="~/Media/Videos/@file.FileName"><video src="~/Media/Videos/@file.FileName" type="video/mp4"  alt="HW3VID" width="320" height="240" /></a>
+
+
+                <p>@file.FileName</p>
+
+                <input type="button" value="Download" class="btn btn-success" onclick="location.href='@Url.Action("DownloadVideo", new { fileName = file.FileName })'" />
+
+                <input type="button" value="DELETE" class="btn btn-danger" onclick="location.href='@Url.Action("DeleteVideo", new { fileName = file.FileName })'" />
+                <br />
+
             </div>
-            
-        
 
-            <p>@file.FileName</p>
-
-            <input type="button" value="Download" class="btn btn-success" onclick="location.href='@Url.Action("DownloadVideo", new { fileName = file.FileName })'" />
-
-            <input type="button" value="DELETE" class="btn btn-danger" onclick="location.href='@Url.Action("DeleteVideo", new { fileName = file.FileName })'" />
-            <br />
-
-        </div>
-        
-    }
+        }
+    </div>
 </div>
 
 
 
-<script>
-    $(document).ready(function ($) {
-        $(".gallery a").fancybox();
-    });
-</script>
+    <script>
+        $(document).ready(function ($) {
+            $(".gallery a").fancybox();
+        });
+    </script>

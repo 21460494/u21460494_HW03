@@ -15,7 +15,7 @@
         <div class="col-sm-8">
 
             <h2>Description</h2>
-            <p></p>
+            <p>In this assignment I was tasked with making an MVC project that could take the users input files and save them in a media document which would be used to display the relevent files in the different views depending on what radio button the user selects. </p> 
 
         </div>
         <div class="col-sm-4">
@@ -24,26 +24,27 @@
             <h2>Option Selection</h2>
             @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
-                <div>
-                    @Html.RadioButton("Radio", "Document", false, new { id = "radio1" })
-                    Document
-                    <br />
+        <div>
+            @Html.RadioButton("Radio", "Document", false, new { id = "radio1" })
+            Document
+            <br />
 
-                    @Html.RadioButton("Radio", "Images", false, new { id = "radio2" })
-                    Image
-                    <br />
+            @Html.RadioButton("Radio", "Images", false, new { id = "radio2" })
+            Image
+            <br />
 
-                    @Html.RadioButton("Radio", "Videos", false, new { id = "radio3" })
-                    Video
-                    <br />
+            @Html.RadioButton("Radio", "Videos", false, new { id = "radio3" })
+            Video
+            <br />
 
-                    <input type="file" name="files" />
-                    <br />
-                    <br />
-                    <input type="submit" value="Upload" />
-                    @ViewBag.Message
+            <input type="file" name="files" />
+            <br />
+            <br />
+            <input type="submit" value="Upload" />
+            <br />
+            @ViewBag.Message
 
-                </div>
+        </div>
 
             }
 
