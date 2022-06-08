@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>MyMedia</h2>
+<h4>Something About the something</h4>
+
+
+
+<div class="p-3 mb-2 bg-light text-dark">
+
+    <div class="row">
+        <div class="col-sm-8">
+
+            <h2>Description</h2>
+            <p></p>
+
+        </div>
+        <div class="col-sm-4">
+
+
+            <h2>Option Selection</h2>
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div>
+                    @Html.RadioButton("Radio", "Document", false, new { id = "radio1" })
+                    Document
+                    <br />
+
+                    @Html.RadioButton("Radio", "Images", false, new { id = "radio2" })
+                    Image
+                    <br />
+
+                    @Html.RadioButton("Radio", "Videos", false, new { id = "radio3" })
+                    Video
+                    <br />
+
+                    <input type="file" name="files" />
+                    <br />
+                    <br />
+                    <input type="submit" value="Upload" />
+                    @ViewBag.Message
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
