@@ -40,18 +40,24 @@
 
             @foreach (FileModel file in Model)
             {
-                <tr>
-                    @*
-                        Default >> @Html.DisplayFor(modelItem => file.FileName)
-                    *@
+        <tr>
+            @*
+        Default >> @Html.DisplayFor(modelItem => file.FileName)
+            *@
 
-                    <td>@file.FileName</td>
-                    <td>
-                        <input type="button" value="Download" class="btn btn-success" onclick="location.href='@Url.Action("DownloadFile", new { fileName = file.FileName })'" />
+            <td>@file.FileName</td>
+            <td>
+                <input type="button" value="Download" class="btn btn-success" onclick="location.href='@Url.Action("DownloadFile", new { fileName = file.FileName })'" />
 
-                    </td>
 
-                </tr>
+            </td>
+            <td>
+                <input type="button" value="DELETE" class="btn btn-danger" onclick="location.href='@Url.Action("DeleteFile", new { fileName = file.FileName })'" />
+
+            </td>
+            
+
+        </tr>
             }
         </table>
     </div>

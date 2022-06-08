@@ -15,7 +15,7 @@ namespace u21460494_HW03.Controllers
         {
             //Fetch all files in the Folder (Directory).
 
-            string[] filePaths = Directory.GetFiles(Server.MapPath("~/Media/Images"));
+            string[] filePaths = Directory.GetFiles(Server.MapPath("~/Media/Images/"));
 
             //Copy File names to Model collection.
             //The return below returns to the list here.
@@ -31,11 +31,11 @@ namespace u21460494_HW03.Controllers
         }
 
 
-        public FileResult DownloadFile(string fileName) 
+        public FileResult DownloadImage(string fileName) 
         {
             //Build the File Path.
 
-            string path = Server.MapPath("~/Media/Images") + fileName;
+            string path = Server.MapPath("~/Media/Images/") + fileName;
 
             //Read the File data into Byte Array.
             //Use a byte array becasue of octet-stream.
@@ -48,16 +48,17 @@ namespace u21460494_HW03.Controllers
             //unknown file type. These .octet-stream files are arbitrary binary data
             //files that may be in any multimedia format.
 
-            return File(bytes, "application/octet-stream", fileName);
+            return File(bytes, "application/octet-stream/", fileName);
         }
 
-        public ActionResult DeleteFile(string fileName)
+        public ActionResult DeleteImage(string fileName)
         {
             //Delete requires reading the files and then the allocation of a file path.
             //The file is then deleted based on the identified file path.
 
-            string path = Server.MapPath("~/Media/Images") + fileName;
-            byte[] bytes = System.IO.File.ReadAllBytes(path);
+            string path = Server.MapPath("~/Media/Images/") + fileName;
+
+             byte[] bytes = System.IO.File.ReadAllBytes(path);
 
             System.IO.File.Delete(path);
 

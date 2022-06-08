@@ -31,11 +31,11 @@ namespace u21460494_HW03.Controllers
         }   
 
 
-            public FileResult DownloadFile(string fileName)
+            public FileResult DownloadVideo(string fileName)
             {
                 //Build the File Path.
 
-                string path = Server.MapPath("~/Media/Videos") + fileName;
+                string path = Server.MapPath("~/Media/Videos/") + fileName;
 
                 //Read the File data into Byte Array.
                 //Use a byte array becasue of octet-stream.
@@ -51,12 +51,12 @@ namespace u21460494_HW03.Controllers
                 return File(bytes, "application/octet-stream", fileName);
             }
 
-            public ActionResult DeleteFile(string fileName)
+            public ActionResult DeleteVideo(string fileName)
             {
                 //Delete requires reading the files and then the allocation of a file path.
                 //The file is then deleted based on the identified file path.
 
-                string path = Server.MapPath("~/Media/Videos") + fileName;
+                string path = Server.MapPath("~/Media/Videos/") + fileName;
                 byte[] bytes = System.IO.File.ReadAllBytes(path);
 
                 System.IO.File.Delete(path);
