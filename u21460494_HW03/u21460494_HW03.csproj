@@ -133,6 +133,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\A8A0750-1-750x500.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -164,15 +165,6 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Controllers\OBS 210\Chapter 1_2022 class act+memo.pdf" />
-    <Content Include="Controllers\OBS 210\Chapter 8 - Warehousing %281%29.ppt" />
-    <Content Include="Controllers\OBS 210\class slides\Chapter 2_Class slides.pdf" />
-    <Content Include="Controllers\OBS 210\class slides\Chapter 4_Clickup slides%281%29.pdf" />
-    <Content Include="Controllers\OBS 210\class slides\Chapter 5_Class Slides%281%29.pdf" />
-    <Content Include="Controllers\OBS 210\customer service CH 2.pdf" />
-    <Content Include="Controllers\OBS 210\Inventory Management CH 5 .pdf" />
-    <Content Include="Controllers\OBS 210\Supply Chain CH 1.pdf" />
-    <Content Include="Controllers\OBS 210\Supply Management CH4.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -214,12 +206,11 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Videos\Index.cshtml" />
     <Content Include="Views\Files\Index.cshtml" />
     <Content Include="Views\Images\Index.cshtml" />
+    <Content Include="Views\Videos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Media\Documents\" />
     <Folder Include="Media\Images\" />
     <Folder Include="Media\Videos\" />
