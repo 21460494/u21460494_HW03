@@ -13,7 +13,7 @@ namespace u21460494_HW03.Controllers
         // GET: Images
         public ActionResult Index()
         {
-            //Fetch all files in the Folder (Directory).
+            //Fetch all files in the Images Folder .
 
             string[] filePaths = Directory.GetFiles(Server.MapPath("~/Media/Images/"));
 

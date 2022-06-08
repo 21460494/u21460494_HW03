@@ -21,7 +21,7 @@
 
         @foreach (FileModel file in Model)
         {
-
+            //class gallery for the fancy box to work
             <div class="gallery">
                 <div class="col-md-3">
                     <a href="~/Media/Images/@file.FileName"><img src="~/Media/Images/@file.FileName" alt="HW3IMG" width="320" height="240" /></a>
@@ -39,7 +39,7 @@
     </div>
     </div>
 
-
+@*Fancy Box Code to make it work*@
     <script>
         $(document).ready(function ($) {
             $(".gallery a").fancybox();

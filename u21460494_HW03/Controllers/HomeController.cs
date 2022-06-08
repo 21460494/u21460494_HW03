@@ -30,6 +30,7 @@ namespace u21460494_HW03.Controllers
 
             if (radioSelector == "Document")
             {
+
                 // Verify that the user selected a file
                 // Not null and has a length
 

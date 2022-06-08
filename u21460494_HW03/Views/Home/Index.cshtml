@@ -24,6 +24,8 @@
             <h2>Option Selection</h2>
             @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
+
+                //create radio buttons
         <div>
             @Html.RadioButton("Radio", "Document", false, new { id = "radio1" })
             Document
@@ -37,6 +39,7 @@
             Video
             <br />
 
+             @* Create buttons to select file type and then upload that filetype*@
             <input type="file" name="files" />
             <br />
             <br />
